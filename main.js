@@ -1,6 +1,11 @@
+let porkAudio = document.getElementById("john");
+
 function john() {
-  document.getElementById("john").play();
+  porkAudio.currentTime = 0;
+  porkAudio.pause();
+  porkAudio.play();
 }
+
 function clickSound(){
   document.getElementById("click").play();
 }
