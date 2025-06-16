@@ -9,3 +9,7 @@ function john() {
 function clickSound(){
   document.getElementById("click").play();
 }
+
+function shrekSpin() {
+  document.getElementById("shrek").classList.toggle("spinning");
+}
