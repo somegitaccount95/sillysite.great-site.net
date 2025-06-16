@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Silly Site</title>
         <link rel="stylesheet" href="style.css">
+
     </head>
+
     <body>
         <audio id="john" src="sound/john.wav" preload="auto"></audio>
         <audio id="click" src="sound/click.mp3"></audio>
+
         <h2>Welcome To non silly site</h2>
         <p>
             site
         </p>
-        <div id="pork-container">
-            <img onclick="john()" id="pork" src="https://i.pinimg.com/736x/66/dc/aa/66dcaace4a1b66140e35a1026f483347.jpg">
-            <button onclick="clickSound()" class="button color-button" id="red-button">
-                big red button
-            </button>
-            <button onclick="clickSound()" class="button color-button" id="blue-button">
-                big blue button
-            </button>
-            <button onclick="clickSound()" class="button color-button" id="green-button">
-                big green button
-            </button>
+
+        <div class="content">
+            <div id="pork-container">
+                <img onclick="john()" id="pork" src="images/john-pork.jpg">
+                <button onclick="clickSound()" class="button color-button" id="red-button">
+                    big red button
+                </button>
+                <button onclick="clickSound()" class="button color-button" id="blue-button">
+                    big blue button
+                </button>
+                <button onclick="clickSound()" class="button color-button" id="green-button">
+                    big green button
+                </button>
+            </div>
+
+            <img id="shrek" src="images/shrek.png"></img>
         </div>
+        
         <script src="main.js"></script>
+
     </body>
 </html>
