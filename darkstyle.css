@@ -1,0 +1,22 @@
+.light-shadow:hover {
+  box-shadow: -4px 4px #585858;
+}
+.light-shadow:active {
+  box-shadow: -2px 2px #585858;
+}
+
+.light-button{
+  color: #333333;
+  background-color: #ebebeb;
+  transition: color 0.3s, background-color 0.5s;
+}
+
+.dark {
+  background-color: #333333;
+  transition: color 0.3s, background-color 0.5s;
+}
+
+#welcome-bar.dark-bar {
+  background-color: #222222;
+  transition: background-color 0.5s;
+}
