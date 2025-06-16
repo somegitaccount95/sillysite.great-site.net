@@ -1,15 +1,15 @@
+let porkAudio = document.getElementById("john");
+
 function john() {
-  var audio = document.getElementById("john");
-  audio.currentTime = 0;
-  audio.play();
+  porkAudio.currentTime = 0;
+  porkAudio.pause();
+  porkAudio.play();
 }
+
 function clickSound(){
-  var audio = document.getElementById("click");
-  audio.currentTime = 0;
-  audio.play();
+  document.getElementById("click").play();
 }
-function tickSound(){
-  var audio = document.getElementById("tick");
-  audio.currentTime = 0;
-  audio.play();
+
+function shrekSpin() {
+  document.getElementById("shrek").classList.toggle("spinning");
 }

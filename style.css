@@ -3,36 +3,87 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #c0c0c0;
+  text-align: center;
+}
+
+#content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#shrek {
+  height: 300px;
+  user-select: none;
 }
 
 #pork {
-  width: 50px;
+  width: 50px; 
   border-radius: 100%;
-  display: inline-block;
-  cursor: pointer;
 }
+
+#pork:hover {
+  box-shadow: -6px 6px 4px #242424;
+  transform: translateX(2px) translateY(-2px);
+}
+
+#pork:active {
+  box-shadow: -2px 2px 2px #242424;
+  transform: translateX(-1px) translateY(1px);
+}
+
 
 .color-button {
   color: #ffffff;
-  background-color: #eb364b;
+  background-color: #242424;
   padding: 10px 18px 10px 18px;
   border: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  transform: translateX(0);
+  transform: translateY(0);
   border-radius: 20px;
   margin: 0 auto 10px 20px;
   position: relative;
   font-weight: bold;
-  display: inline-block;
-  cursor: pointer;
+  display: block;
 }
+
+.color-button:hover {
+  box-shadow: -4px 4px 4px #242424;
+  transform: translateX(2px) translateY(-2px);
+}
+
+.color-button:active {
+  box-shadow: -2px 2px 2px #242424;
+  transform: translateX(-1px) translateY(1px);
+}
+
 #blue-button {
   background-color: #5483aa;
   padding: 10px 16px 10px 16px;
 }
+
 #green-button {
   background-color: #27e99e;
   padding: 10px 12px 10px 12px;
 }
+
+#red-button {
+  background-color: #eb364b;
+  padding: 10px 12px 10px 12px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinning {
+     animation: spin 0.5s ease-in-out;
 .button {
   transition: transform 0.15s, box-shadow 0.15s;
   transform: translateX(0);
@@ -72,4 +123,3 @@ body {
 #welcome-div{
   display: inline-block;
 }
-
