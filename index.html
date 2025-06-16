@@ -7,21 +7,26 @@
     <body>
         <audio id="john" src="sound/john.wav"></audio>
         <audio id="click" src="sound/click.mp3"></audio>
-        <h2>Welcome To non silly site</h2>
-        <p>
-            site
-        </p>
-        <div id="pork-container">
-            <img onclick="john()" id="pork" src="https://i.pinimg.com/736x/66/dc/aa/66dcaace4a1b66140e35a1026f483347.jpg">
-            <button onclick="clickSound()" class="button color-button" id="red-button">
-                big red button
-            </button>
-            <button onclick="clickSound()" class="button color-button" id="blue-button">
-                big blue button
-            </button>
-            <button onclick="clickSound()" class="button color-button" id="green-button">
-                big green button
-            </button>
+        <audio id="tick" src="sound/tick.mp3"></audio>
+
+        <div id="bar">
+            <div id="welcome-div">
+                <h2 id="welcome">WELCOME TO NON SILLY SITE</h2>
+            </div>
+            <div id="buttons">
+                <button onclick="clickSound()" onmouseover="tickSound()" class="button color-button" id="red-button">
+                    big red button
+                </button>
+                <button onclick="clickSound()" onmouseover="tickSound()" class="button color-button" id="blue-button">
+                    big blue button
+                </button>
+                <button onclick="clickSound()" onmouseover="tickSound()" class="button color-button" id="green-button">
+                    big green button
+                </button> 
+            </div>
+            <div id="pork-container">
+                <img onclick="john()" id="pork" src="https://i.pinimg.com/736x/66/dc/aa/66dcaace4a1b66140e35a1026f483347.jpg">
+            </div>
         </div>
         <script src="main.js"></script>
     </body>
