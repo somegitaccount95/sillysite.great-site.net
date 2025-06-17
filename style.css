@@ -1,7 +1,9 @@
 * {
-  font-family: 'Oxygen';
+  font-family: 'Tilt Warp';
 }
-
+a {
+  text-decoration: none;
+}
 html{
   height: 100%;
 }
@@ -59,7 +61,7 @@ body {
   font-weight: bold;
   display: block;
   cursor: pointer;
-  width: 140px;
+  width: 150px;
   height: 40px;
   font-size: 14px;
 }
@@ -68,7 +70,7 @@ body {
   position: fixed;
   right: 20px;
   bottom: 10px;
-  width: 100px;
+  width: 110px;
 }
 
 #blue-button {
@@ -123,8 +125,7 @@ body {
 #welcome {
   display: inline-block;
   font-size: 40px;
-  font-weight: 900;
-  background: linear-gradient(to right, #218bff, #c084fc, #db2777);
+  background: linear-gradient(to bottom, #d38282, #ffa5b4, #f77c7c);
   background-clip: text;
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent; 
@@ -135,8 +136,7 @@ body {
 #welcome-bar{
   display: flex;
   width: 100%;
-  background-color: #dfdfdf;
+  background-color: rgba(0, 0, 0, .15);
   justify-content: flex-start;
   align-items: center;
-  transition: color 0.3s, background-color 0.5s;
 }
