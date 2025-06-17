@@ -22,7 +22,9 @@ function tickSound(){
 }
 
 function shrekSpin() {
-  document.getElementById("shrek").classList.toggle("spinning");
+  document.getElementById("shrek").classList.remove("spinning");
+  void document.getElementById("shrek").offsetWidth
+  document.getElementById("shrek").classList.add("spinning");
 }
 
 function toggle() {
