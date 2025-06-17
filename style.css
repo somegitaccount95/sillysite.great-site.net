@@ -1,5 +1,5 @@
 * {
-  font-family: 'Trebuchet MS';
+  font-family: 'Oxygen';
 }
 
 html{
@@ -48,7 +48,7 @@ body {
 .color-button {
   color: #ffffff;
   background-color: #444444;
-  padding: 10px 18px 10px 18px;
+  /* padding: 10px 18px 10px 18px; */
   border: none;
   transition: transform 0.15s, box-shadow 0.15s;
   transform: translateX(0);
@@ -59,21 +59,31 @@ body {
   font-weight: bold;
   display: block;
   cursor: pointer;
+  width: 140px;
+  height: 40px;
+  font-size: 14px;
+}
+
+#dark-mode{
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  width: 100px;
 }
 
 #blue-button {
   background-color: #5483aa;
-  padding: 10px 16px 10px 16px;
+  /* padding: 10px 16px 10px 16px; */
 }
 
 #green-button {
   background-color: #27e99e;
-  padding: 10px 12px 10px 12px;
+  /* padding: 10px 12px 10px 12px; */
 }
 
 #red-button {
   background-color: #eb364b;
-  padding: 10px 12px 10px 12px;
+  /* padding: 10px 19px 10px 19px; */
 }
 
 @keyframes spin {
