@@ -27,28 +27,12 @@ function shrekSpin() {
   document.getElementById("shrek").classList.add("spinning");
 }
 
-function toggle() {
-  if(!dark){
-    document.getElementById("dark-mode").innerHTML = "dark mode";
-  }else{
-    document.getElementById("dark-mode").innerHTML = "light mode";
-  }
-  document.getElementById("dark-mode").classList.toggle("light-button");
-
-  document.getElementsByTagName("body")[0].classList.toggle("dark");
-
-  document.querySelectorAll("button").forEach(element => {
-    element.classList.toggle("light-shadow");
-  });
-  dark = !dark;
-}
-
 class TopHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = 
     `
     <div id="welcome-bar">
-      <a href="/"><h2 id="welcome">WELCOME TO NON SILLY SITE</h2></a>
+      <h2 id="welcome"><a href="/">WELCOME TO NON SILLY SITE</a></h2>
       <img onclick="john()" id="pork" src="images/john-pork.jpg">
     </div>
     `
@@ -69,3 +53,19 @@ class DarkMode extends HTMLElement {
 
 customElements.define("top-header", TopHeader)
 customElements.define("dark-mode", DarkMode)
+
+function toggle() {
+  if(!dark){
+    document.getElementById("dark-mode").innerHTML = "dark mode";
+  }else{
+    document.getElementById("dark-mode").innerHTML = "light mode";
+  }
+  document.getElementById("dark-mode").classList.toggle("light-button");
+
+  document.getElementsByTagName("body")[0].classList.toggle("dark");
+
+  document.querySelectorAll("button").forEach(element => {
+    element.classList.toggle("light-shadow");
+  });
+  dark = !dark;
+}
