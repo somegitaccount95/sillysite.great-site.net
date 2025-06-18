@@ -158,5 +158,12 @@ body {
   }
   .nav-button{
     margin-right: 0px;
+    margin-left: 0px;
+  }
+  #riba-text{
+    color: #000000;
+    margin-top: 40px;
+    margin-right: 100px;
+    margin-left: 100px;
   }
 }
