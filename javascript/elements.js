@@ -6,7 +6,7 @@ class TopHeader extends HTMLElement {
     <header>
             <a href="/">
                 <h1 id="logo">
-                    NON SILLY WEBSITE
+                    NON SILLY SITE
                 </h1>
             </a>
             <div id="nav-buttons">
