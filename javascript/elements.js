@@ -36,7 +36,7 @@ class DarkMode extends HTMLElement {
     this.innerHTML = 
     `
     <div>
-      <button onclick="clickSound(); toggle();" onmouseover="tickSound()" id="dark-mode" class="color-button button">
+      <button onclick="clickSound(); toggle();" onmouseover="tickSound()" id="dark-mode" class="slide color-button button">
           dark mode
       </button>
     </div>

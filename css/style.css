@@ -61,10 +61,10 @@ body {
   font-size: 14px;
 }
 .nav-button{
-  background-image: linear-gradient(to right, #62727c, #42445f); /* Initial gradient */
-  background-size: 200% auto;
-  background-position: 0 0;
-  transition: background-position 0.5s ease;
+  background-size: 200% 100%; 
+  background-image: linear-gradient(to right, #8f8ba7 50%, #494758 50%); 
+  background-position: 100% 0;
+  transition: all 0.2s;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -72,12 +72,12 @@ body {
   margin-left: 40px;
 }
 .nav-button:hover {
-  background-position: 100% 0;
+  background-position: 0 0;
 }
 .button {
-  transition: all 0.2s;
   transform: translateX(0);
   transform: translateY(0);
+  transition: all 0.2s;
 }
 .button:hover {
   box-shadow: -4px 4px #353535;
@@ -124,6 +124,13 @@ body {
   margin-left: 30px;
 }
 
+#riba-text{
+    color: #000000;
+    margin-top: 40px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -137,33 +144,41 @@ body {
   animation: spin 0.5s ease-in-out;
 }
 
-@media only screen and (max-width: 980px) {
-  header{
-    flex-direction: column;
-  }
+@media only screen and (max-width: 1300px) {
   #pork {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  #logo {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   #nav-buttons{
-    margin-left: 0px;
+    margin-left: 70px;
   }
   .nav-button{
-    margin-right: 0px;
-    margin-left: 0px;
+    margin-right: 5px;
+    margin-left: 5px;
   }
-  #riba-text{
-    color: #000000;
-    margin-top: 40px;
-    margin-right: 100px;
-    margin-left: 100px;
+  @media only screen and (max-width: 740px) {
+    header{
+      flex-direction: column;
+    }
+    #pork {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    #logo {
+      margin-bottom: 20px;
+      margin-top: 20px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    #nav-buttons{
+      margin-left: 0px;
+    }
+    .nav-button{
+      margin-right: 0px;
+      margin-left: 0px;
+    }
   }
 }
+
