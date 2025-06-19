@@ -1,5 +1,6 @@
 const canvas = document.getElementById("canvas");
 const ribaImage = document.getElementById("riba");
+const egamIabir = document.getElementById("abir"); // Reverse ;)
 const ctx = canvas.getContext("2d");
 
 let keys = {
@@ -14,7 +15,8 @@ function roundToNearestPointTwo(number) {
 }
 
 class Player {
-    constructor(image, width, height) {
+    constructor(image, egami, width, height) {
+        this.egami = egami;
         this.image = image;
         this.width = width;
         this.height = height;
@@ -24,10 +26,15 @@ class Player {
         this.yVel = 0;
         this.maxVel = 6;
         this.drag = -0.2;
+        this.flipped = false;
     }
 
     draw() {
-        ctx.drawImage(this.image, this.x, this.y,100, 30);
+        if (this.flipped) {
+            ctx.drawImage(this.egami, this.x, this.y, 100, 30);
+        } else {
+            ctx.drawImage(this.image, this.x, this.y, 100, 30);
+        }
     }
 
     handleKeys() {
@@ -39,8 +46,10 @@ class Player {
 
         if (keys.left) {
             player.xVel = -this.maxVel;
+            this.flipped = false;
         } else if (keys.right) {
             player.xVel = this.maxVel;
+            this.flipped = true;
         }
     }
 
@@ -74,7 +83,7 @@ class Player {
     }
 }
 
-let player = new Player(ribaImage, 0, 0);
+let player = new Player(ribaImage, egamIabir, 0, 0);
 
 function clear() {
     ctx.fillStyle = "#0E87CC";
