@@ -2,6 +2,10 @@ body {
     overflow: hidden;
 }
 
+#riba-body {
+    background-color: #153142;
+}
+
 #content {
     justify-content: space-around;;
 }

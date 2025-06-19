@@ -43,5 +43,5 @@ function toggle() {
   document.querySelectorAll("button").forEach(element => {
     element.classList.toggle("light-shadow");
   });
-  dark = !dark;
+  dark = !dark; 
 }
