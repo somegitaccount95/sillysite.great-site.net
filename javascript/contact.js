@@ -18,14 +18,34 @@ class Player {
         this.y = 0;
         this.xVel = 0;
         this.yVel = 0;
-
+        this.maxVel = 2;
+        this.drag = 1;
     }
 
     draw() {
         ctx.drawImage(this.image, this.x, this.y,50, 15);
     }
 
+    handleKeys() {
+        if (keys.up) {
+            player.yVel = this.maxVel;
+        } else if (keys.down) {
+            player.yVel = -this.maxVel;
+        }
+
+        if (keys.left) {
+            player.xVel = -this.maxVel;
+        } else if (keys.right) {
+            player.xVel = this.maxVel;
+        }
+    }
+
     update() {
+
+        this.handleKeys();
+
+        this.xVel 
+
         this.x += this.xVel;
         this.y += this.yVel;
 
@@ -36,12 +56,14 @@ class Player {
 let player = new Player(ribaImage, 0, 0);
 
 function clear() {
-    ctx.fillStyle = "Red";
+    ctx.fillStyle = "#0E87CC";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function update() {
     clear();
+
+    console.log(canvas.width, canvas.height)
 
     player.update();
 
