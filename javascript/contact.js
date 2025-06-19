@@ -9,6 +9,10 @@ let keys = {
     right: false
 };
 
+function roundToNearestPointTwo(number) {
+  return Math.round(number * 5) / 5;
+}
+
 class Player {
     constructor(image, width, height) {
         this.image = image;
@@ -18,12 +22,12 @@ class Player {
         this.y = 0;
         this.xVel = 0;
         this.yVel = 0;
-        this.maxVel = 2;
-        this.drag = 1;
+        this.maxVel = 6;
+        this.drag = -0.2;
     }
 
     draw() {
-        ctx.drawImage(this.image, this.x, this.y,50, 15);
+        ctx.drawImage(this.image, this.x, this.y,100, 30);
     }
 
     handleKeys() {
@@ -40,14 +44,31 @@ class Player {
         }
     }
 
+    handlePhysics() {
+        if (this.xVel > 0) {
+            this.xVel += this.drag;
+        } else if (this.xVel < 0) {
+            this.xVel -= this.drag;
+        }
+        
+        if (this.yVel > 0) {
+            this.yVel += this.drag;
+        } else if (this.yVel < 0) {
+            this.yVel -= this.drag;
+        }
+
+        this.xVel = roundToNearestPointTwo(this.xVel);
+        this.yVel = roundToNearestPointTwo(this.yVel);
+
+        this.x += this.xVel;
+        this.y += this.yVel;
+    }
+
     update() {
 
         this.handleKeys();
 
-        this.xVel 
-
-        this.x += this.xVel;
-        this.y += this.yVel;
+        this.handlePhysics();
 
         this.draw();
     }
@@ -74,20 +95,15 @@ function resizeCanvas() {
 }
 
 
-resizeCanvas();
-
-
-window.addEventListener('resize', resizeCanvas);
-
 function update() {
     clear();
-
-    console.log(canvas.width, canvas.height)
 
     player.update();
 
     window.requestAnimationFrame(update);
 }
+
+window.addEventListener('resize', resizeCanvas);
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'ArrowUp') {
@@ -113,4 +129,5 @@ document.addEventListener('keyup', function(event) {
     }
 });
 
+resizeCanvas();
 window.requestAnimationFrame(update);
