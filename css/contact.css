@@ -1,16 +1,13 @@
-html {
-    height: 100vw;
-    margin: 0px;
-    padding: 0px;
+body {
+    overflow: hidden;
 }
 
-body {
-    width: 100vw;
-    height: 100vw;
-    margin: 0px;
-    padding: 0px;
+#content {
+    justify-content: space-around;;
 }
 
 canvas {
-    width: 100vw;
+    width: 90%;
+    height: 100%;
+    flex-grow: 1;
 }

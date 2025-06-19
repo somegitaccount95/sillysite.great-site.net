@@ -9,7 +9,7 @@ a {
   text-decoration: none;
 }
 
-header {
+#header {
   display: flex;
   justify-content: flex-end;
   align-items: center;

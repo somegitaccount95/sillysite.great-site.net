@@ -3,7 +3,7 @@ class TopHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = 
     `
-    <header>
+    <div id="header">
             <a href="/">
                 <h1 id="logo">
                     NON SILLY SITE
@@ -27,7 +27,7 @@ class TopHeader extends HTMLElement {
                 </a>
             </div>
             <img onclick="john()" id="pork" src="images/john-pork.jpg">
-        </header>
+        </div>
     `
   }
 }
