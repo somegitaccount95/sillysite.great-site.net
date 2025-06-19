@@ -27,7 +27,7 @@ class TopHeader extends HTMLElement {
                 </a>
             </div>
             <img onclick="john()" id="pork" src="images/john-pork.jpg">
-        </div>
+    </div>
     `
   }
 }

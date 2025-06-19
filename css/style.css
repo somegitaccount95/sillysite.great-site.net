@@ -171,7 +171,7 @@ body {
   }
 
   @media only screen and (max-width: 740px) {
-    header{
+    #header{
       flex-direction: column;
     }
     #pork {

@@ -28,9 +28,9 @@ class Player {
 
     handleKeys() {
         if (keys.up) {
-            player.yVel = this.maxVel;
-        } else if (keys.down) {
             player.yVel = -this.maxVel;
+        } else if (keys.down) {
+            player.yVel = this.maxVel;
         }
 
         if (keys.left) {
@@ -59,6 +59,25 @@ function clear() {
     ctx.fillStyle = "#0E87CC";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
+
+function resizeCanvas() {
+    const dpr = window.devicePixelRatio;
+    const rect = canvas.getBoundingClientRect();
+
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+
+    ctx.scale(dpr, dpr);
+
+    canvas.style.width = `${rect.width}px`;
+    canvas.style.height = `${rect.height}px`;
+}
+
+
+resizeCanvas();
+
+
+window.addEventListener('resize', resizeCanvas);
 
 function update() {
     clear();
