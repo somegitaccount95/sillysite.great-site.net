@@ -15,3 +15,24 @@
   background-color: #333333;
   transition: color 0.3s, background-color 0.5s;
 }
+
+#riba-text.light-text {
+  color: #ebebeb;
+}
+#policy.light-text {
+  color: #ebebeb;
+}
+
+#values-text.light-text {
+  color: #ebebeb;
+}
+#values.light-text {
+  color: #ebebeb;
+}
+
+#promise-text.light-text {
+  color: #ebebeb;
+}
+#promise.light-text {
+  color: #ebebeb;
+}

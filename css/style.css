@@ -137,13 +137,6 @@ body {
   margin-left: 30px;
 }
 
-#riba-text{
-    color: #000000;
-    margin-top: 40px;
-    margin-right: 100px;
-    margin-left: 100px;
-  }
-
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -192,6 +185,9 @@ body {
     .nav-button{
       margin-right: 0px;
       margin-left: 0px;
+    }
+    .about-block {
+      flex-direction: column;
     }
   }
 }
