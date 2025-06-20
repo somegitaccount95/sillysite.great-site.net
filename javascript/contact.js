@@ -14,6 +14,24 @@ function roundToNearestPointTwo(number) {
   return Math.round(number * 5) / 5;
 }
 
+function rectsCollide(rect1, rect2) {
+  return !(
+    rect1.x + rect1.width <= rect2.x ||
+    rect1.x >= rect2.x + rect2.width ||
+    rect1.y + rect1.height <= rect2.y ||
+    rect1.y >= rect2.y + rect2.height
+  );
+}
+
+class Rect {
+  constructor(x, y, width, height) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+  }
+}
+
 class Player {
     constructor(image, egami, width, height) {
         this.egami = egami;
@@ -31,10 +49,14 @@ class Player {
 
     draw() {
         if (this.flipped) {
-            ctx.drawImage(this.egami, this.x, this.y, 100, 30);
+            ctx.drawImage(this.egami, this.x, this.y, this.width, this.height);
         } else {
-            ctx.drawImage(this.image, this.x, this.y, 100, 30);
+            ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
         }
+    }
+
+    getRect() {
+        return new Rect(this.x, this.y, this.width, this.height);
     }
 
     handleKeys() {
@@ -83,7 +105,7 @@ class Player {
     }
 }
 
-let player = new Player(ribaImage, egamIabir, 0, 0);
+let player = new Player(ribaImage, egamIabir, 100, 30);
 
 function clear() {
     ctx.fillStyle = "#0E87CC";
