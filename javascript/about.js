@@ -5,7 +5,7 @@ function toggle() {
     document.getElementById("dark-mode").innerHTML = "light mode";
   }
   document.getElementById("dark-mode").classList.toggle("light-button");
-  document.getElementById("riba-text").classList.toggle("light-text");
+  document.getElementById("policy-text").classList.toggle("light-text");
   document.getElementById("policy").classList.toggle("light-text");
 
   document.getElementById("values-text").classList.toggle("light-text");

@@ -8,13 +8,16 @@
 
 .about-block {
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.1);
-  margin: 30px;
   border-radius: 30px;
+  width: fit-content;
+  padding: 30px;
+  margin: auto;
 }
 
-#riba-text{
+.riba-text{
   color: #333333;
   font-size: 20px;
   transition: color 1s;
@@ -27,13 +30,6 @@
   margin-top: 30px;
   transition: color 1s;
   font-size: 50px;
-}
-
-#values-text{
-  color: #333333;
-  font-size: 20px;
-  transition: color 1s;
-  display: inline-block;
 }
 
 .handsome-riba {
@@ -53,21 +49,18 @@
   font-size: 50px;
 }
 
-#promise-text{
-  color: #333333;
-  font-size: 20px;
-  transition: color 1s;
-  display: inline-block;
-}
-
 @media only screen and (max-width: 1300px) {
   
   @media only screen and (max-width: 840px) {
     .about-block {
       flex-direction: column;
     }
-    #riba-text{
+    .riba-text{
       margin-bottom: 40px;
+      font-size: 18px;
+    }
+    .handsome-riba {
+      width: 300px;
     }
   }
 }
