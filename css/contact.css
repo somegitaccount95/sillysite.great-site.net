@@ -1,17 +1,7 @@
-body {
-    overflow: hidden;
-}
-
 #riba-body {
     background-color: #153142;
 }
 
-#content {
-    justify-content: space-around;;
-}
-
 canvas {
-    width: 90%;
-    height: 100%;
     flex-grow: 1;
 }

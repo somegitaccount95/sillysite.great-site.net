@@ -9,6 +9,11 @@ a {
   text-decoration: none;
 }
 
+top-header {
+  display: block;
+  height: fit-content;
+}
+
 #header {
   display: flex;
   justify-content: flex-end;

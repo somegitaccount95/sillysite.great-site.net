@@ -38,8 +38,8 @@ class Player {
         this.image = image;
         this.width = width;
         this.height = height;
-        this.x = 0;
-        this.y = 0;
+        this.x = Math.round(canvas.getBoundingClientRect().width / 2 - width / 2);
+        this.y = Math.round(canvas.getBoundingClientRect().height / 2 - height / 2);
         this.xVel = 0;
         this.yVel = 0;
         this.maxVel = 6;
