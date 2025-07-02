@@ -23,3 +23,15 @@ function toggle() {
   });
   dark = !dark; 
 }
+
+if (dark) {
+  document.getElementById("dark-mode").classList.toggle("light-button");
+  document.getElementById("policy-text").classList.toggle("light-text");
+  document.getElementById("policy").classList.toggle("light-text");
+
+  document.getElementById("values-text").classList.toggle("light-text");
+  document.getElementById("values").classList.toggle("light-text");
+
+  document.getElementById("promise-text").classList.toggle("light-text");
+  document.getElementById("promise").classList.toggle("light-text");
+}
