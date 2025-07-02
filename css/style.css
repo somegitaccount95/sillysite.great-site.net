@@ -35,6 +35,10 @@ body {
   transition: color 0.3s, background-color 0.5s;
 }
 
+.disable-transitions {
+   transition-duration: 0s !important;
+}
+
 #content {
   display: flex;
   justify-content: space-evenly;

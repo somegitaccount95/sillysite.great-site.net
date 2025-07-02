@@ -1,7 +1,9 @@
 function toggle() {
-  if(!dark){
+  if (dark) {
+    localStorage.setItem("theme", "light");
     document.getElementById("dark-mode").innerHTML = "dark mode";
-  }else{
+  } else {
+    localStorage.setItem("theme", "dark");
     document.getElementById("dark-mode").innerHTML = "light mode";
   }
   document.getElementById("dark-mode").classList.toggle("light-button");
