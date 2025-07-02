@@ -8,9 +8,7 @@ let dark = false;
 
 let localStorage = window.localStorage
 
-if (localStorage.getItem("theme") === null) {
-  localStorage.setItem("theme", "light");
-} else if (localStorage.getItem("theme") === "dark") {
+if (localStorage.getItem("theme") === "dark") {
   dark = true;
 } else if (localStorage.getItem("theme") === "light") {
   dark = false;
@@ -56,7 +54,7 @@ function toggle() {
   document.querySelectorAll("button").forEach(element => {
     element.classList.toggle("light-shadow");
   });
-  
+
   dark = !dark; 
 }
 
