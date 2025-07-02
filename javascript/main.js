@@ -4,15 +4,17 @@ customElements.define("dark-mode", DarkMode)
 let porkAudio = document.getElementById("john");
 let tickAudio = document.getElementById("tick");
 let clickAudio = document.getElementById("click");
-let dark = false;
+let dark;
 
-let localStorage = window.localStorage
+let localStorage = window.localStorage;
 
 if (localStorage.getItem("theme") === "dark") {
   dark = true;
 } else if (localStorage.getItem("theme") === "light") {
   dark = false;
-} 
+} else {
+  dark = false;
+}
 
 function john() {
   porkAudio.currentTime = 0;
@@ -58,18 +60,30 @@ function toggle() {
   dark = !dark; 
 }
 
-if (dark) {
-  const allElements = document.querySelectorAll('*');
+function setDark() {
+    const allElements = document.querySelectorAll('*');
 
   allElements.forEach(element => {
     element.classList.add('disable-transitions');
   });
 
-  toggle();
+  document.getElementById("dark-mode").innerHTML = "light mode"
+  
+  document.getElementById("dark-mode").classList.toggle("light-button");
+
+  document.getElementsByTagName("body")[0].classList.toggle("dark");
+
+  document.querySelectorAll("button").forEach(element => {
+    element.classList.toggle("light-shadow");
+  });
 
   setTimeout(() => {
     allElements.forEach(element => {
     element.classList.remove('disable-transitions');
   });
   }, 100);
+}
+
+if (dark) {
+  setDark();
 }
