@@ -4,7 +4,7 @@ customElements.define("dark-mode", DarkMode)
 let porkAudio = document.getElementById("john");
 let tickAudio = document.getElementById("tick");
 let clickAudio = document.getElementById("click");
-let dark =  true;
+let dark = true;
 
 function john() {
   porkAudio.currentTime = 0;
@@ -12,13 +12,13 @@ function john() {
   porkAudio.play();
 }
 
-function clickSound(){
+function clickSound() {
   clickAudio.currentTime = 0;
   clickAudio.pause();
   clickAudio.play();
 }
 
-function tickSound(){
+function tickSound() {
   tickAudio.currentTime = 0;
   tickAudio.pause();
   tickAudio.play();
@@ -31,9 +31,9 @@ function shrekSpin() {
 }
 
 function toggle() {
-  if(!dark){
+  if (!dark) {
     document.getElementById("dark-mode").innerHTML = "dark mode";
-  }else{
+  } else {
     document.getElementById("dark-mode").innerHTML = "light mode";
   }
   document.getElementById("dark-mode").classList.toggle("light-button");
@@ -43,5 +43,5 @@ function toggle() {
   document.querySelectorAll("button").forEach(element => {
     element.classList.toggle("light-shadow");
   });
-  dark = !dark; 
+  dark = !dark;
 }
