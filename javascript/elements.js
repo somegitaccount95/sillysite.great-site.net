@@ -1,8 +1,8 @@
 
 class TopHeader extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = 
-    `
+    this.innerHTML =
+      `
     <div id="header">
             <a href="/">
                 <h1 id="logo">
@@ -33,8 +33,8 @@ class TopHeader extends HTMLElement {
 }
 class DarkMode extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = 
-    `
+    this.innerHTML =
+      `
     <div>
       <button onclick="clickSound(); toggle();" onmouseover="tickSound()" id="dark-mode" class="slide color-button button">
           dark mode
@@ -43,3 +43,6 @@ class DarkMode extends HTMLElement {
     `
   }
 }
+
+customElements.define("top-header", TopHeader)
+customElements.define("dark-mode", DarkMode)

@@ -1,6 +1,3 @@
-customElements.define("top-header", TopHeader)
-customElements.define("dark-mode", DarkMode)
-
 let porkAudio = document.getElementById("john");
 let tickAudio = document.getElementById("tick");
 let clickAudio = document.getElementById("click");
