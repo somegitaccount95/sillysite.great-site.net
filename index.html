@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Silly Site</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/darkstyle.css">
+<head>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tilt+Warp&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non silly site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/darkstyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tilt+Warp&display=swap"
+        rel="stylesheet">
 
 
-    </head>
+</head>
 
-    <body class="no-transition">
-        <audio id="john" src="sound/john.wav" preload="auto"></audio>
-        <audio id="click" src="sound/click.mp3"></audio>
-        <audio id="tick" src="sound/tick.mp3"></audio>
+<body class="no-transition">
+    <audio id="john" src="sound/john.wav" preload="auto"></audio>
+    <audio id="click" src="sound/click.mp3"></audio>
+    <audio id="tick" src="sound/tick.mp3"></audio>
 
-        <top-header></top-header>
-
-        <div id="content">
+    <top-header></top-header>
+    <div id="main-div">
+        <h1 class="text"> A pro site with unimaginable usability</h1>
+        <div id="contet">
             <div>
                 <img id="shrek" src="images/shrek.png" onclick="shrekSpin()"></img>
             </div>
+            <button onclick="clickSound();" onmouseover="tickSound()" id="download-button"
+                class="slide color-button button">
+                download
+            </button>
         </div>
-        <dark-mode></dark-mode>
-        
-        <script src="javascript/elements.js"></script>
-        <script src="javascript/main.js"></script>
-    </body>
+    </div>
+    <dark-mode></dark-mode>
+
+    <script src="javascript/elements.js"></script>
+    <script src="javascript/main.js"></script>
+</body>
+
 </html>
