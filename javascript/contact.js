@@ -114,7 +114,7 @@ function clear() {
 
 function resizeCanvas() {
     const dpr = window.devicePixelRatio;
-    const rect = canvas.getBoundingClientRect();
+    const rect = canvas.getBcoundingClientRect();
 
     canvas.width = rect.width * dpr;
     canvas.height = rect.height * dpr;
